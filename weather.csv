@@ -1,10 +1,10 @@
 ,period,short_descriptions,temperatures
-0,ThisAfternoon,Sunny,High: 75 °F
-1,Tonight,IncreasingClouds,Low: 58 °F
-2,Thursday,SevereThunderstorms,High: 75 °F
-3,ThursdayNight,SevereThunderstorms,Low: 68 °F
-4,Friday,ChanceT-storms,High: 78 °F
-5,FridayNight,ChanceT-storms thenChanceShowers,Low: 69 °F
-6,Saturday,ChanceT-storms,High: 76 °F
-7,SaturdayNight,ChanceT-storms thenChanceShowers,Low: 66 °F
-8,Sunday,ChanceShowers thenMostly Sunny,High: 74 °F
+0,Tonight,Mostly Clearthen ChanceT-storms,Low: 57 °F
+1,Thursday,SevereThunderstorms,High: 76 °F
+2,ThursdayNight,SevereThunderstormsand PatchyFog,Low: 69 °F
+3,Friday,Patchy Fogthen Sunny,High: 80 °F
+4,FridayNight,ChanceT-storms,Low: 70 °F
+5,Saturday,Heavy Rain,High: 77 °F
+6,SaturdayNight,Heavy Rain,Low: 68 °F
+7,Sunday,ChanceT-storms thenSunny,High: 74 °F
+8,SundayNight,Mostly Clear,Low: 59 °F
