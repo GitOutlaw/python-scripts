@@ -1,6 +1,4 @@
-# Left off at 5:22:50 - https://www.youtube.com/watch?v=4F2m91eKmts
-
-# ----- Global Varaibles -----
+# ----- Global Variables -----
 
 
 
