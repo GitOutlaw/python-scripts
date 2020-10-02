@@ -1,6 +1,9 @@
 # Import module getpass
 import getpass
 
+
+
+
 # ---- Global Variables ----
 
 # User input user name
@@ -12,7 +15,7 @@ user_password = getpass.getpass('Please enter your password: ')
 # Password length function
 password_length = len(user_password)
 
-# Changes password_length to diplay '*' hidding the users password  
+# Changes password_length to display '*' hidding the users password  
 hidden_password = '*' * password_length
 
 # Prints results to user
