@@ -1,7 +1,5 @@
 # ----- Global Variables -----
 
-
-
 # Game board
 board = ['-'] * 9
 
@@ -11,7 +9,7 @@ game_still_going = True
 # Who won? or tie?
 winner = None
 
-# Whos turn is it
+# Who's turn is it
 current_player = "X"
 
 
@@ -25,18 +23,18 @@ def display_board():
 # Play a game of tic tac toe
 def play_game():
 
-  # display intial board
+  # display initial board
   display_board()
 
   while game_still_going:
 
-    # handle a single turn of an aribitrary player
+    # handle a single turn of an arbitrary player
     handle_turn(current_player)
 
     # Check if game is has ended
     check_if_game_over()
     
-    # Flip to the oher player
+    # Flip to the other player
     flip_player()
 
   # The game has ended
