@@ -8,4 +8,3 @@ def password_generator():
     print(password)
     
     
-password_generator()
