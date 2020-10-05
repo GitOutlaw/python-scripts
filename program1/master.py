@@ -1,15 +1,15 @@
 from my_functions import user_info, calculation, my_calender, password_generator
 
-user_info()
+# user_info()
 
-print()
+# print()
 
 calculation()
 
-print()
+# print()
 
-my_calender()
+# my_calender()
 
-password_generator()
+# password_generator()
 
-print()
+# print()
