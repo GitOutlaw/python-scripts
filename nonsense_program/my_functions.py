@@ -40,3 +40,10 @@ def password_generator():
     alphabet = string.ascii_letters + string.digits
     password = ''.join(secrets.choice(alphabet) for i in range(12))
     print(f'Random Password Generated: {password}')
+    
+    
+def payroll():
+    hourly_rate = float(input('Enter your hourly pay: '))
+    hours_worked = float(input('Enter your hours worked'))
+    gross_pay = hourly_rate * hours_worked
+    print(f'Your gross pay is {gross_pay:.2f}')
