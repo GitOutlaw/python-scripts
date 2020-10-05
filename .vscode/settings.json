@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Hal\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+    "python.pythonPath": "venv\\Scripts\\python.exe",
+    "python.linting.enabled": true
 }
