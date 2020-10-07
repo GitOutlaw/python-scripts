@@ -3,7 +3,7 @@ import secrets
 
 
 def password_generator(): 
-        print('Password Generator')
+        
         try:
             characters = int(input('How many characters to: '))
 
@@ -14,6 +14,6 @@ def password_generator():
             alphabet = string.ascii_letters + string.digits
             password = ''.join(secrets.choice(alphabet) for i in range(characters))
             print(password)
-           
-            
+     
+                       
 password_generator()  
