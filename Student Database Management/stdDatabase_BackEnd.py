@@ -5,7 +5,8 @@ import sqlite3
 
 def studentData():
     con = sqlite3.connect("student.db")
-    cur.execute("CREATE TABLE IF IT DOES NOT EXIST student(id INTEGER PRIMARY KEY, StdID text, Firstname text, Lastname text, DoB text,\
+    cur = con.cursor()
+    cur.execute("CREATE TABLE IF NOT EXISTS student(id INTEGER PRIMARY KEY, StdID text, Firstname text, Lastname text, DoB text,\
         Age text, Gender text, Address text, Mobile text)")
     con.commit()
     con.close()
@@ -14,7 +15,7 @@ def studentData():
 def addStdRec(StdID, Firstname, Lastname, DoB, Age, Gender, Address, Mobile):
     con = sqlite3.connect("student.db")
     cur = con.cursor()
-    cur.execute("INSERT INTO student VALUES (NULL, ?,?,?,?,?,?,?,?)", StdID, Firstname, Lastname, DoB, Age, Gender, Address, Mobile)
+    cur.execute("INSERT INTO student VALUES (NULL, ?,?,?,?,?,?,?,?)", (StdID, Firstname, Lastname, DoB, Age, Gender, Address, Mobile))
     con.commit()
     con.close()
     
@@ -23,12 +24,12 @@ def viewData():
     con=sqlite3.connect("student.db")
     cur=con.cursor()
     cur.execute("SELECT * FROM student")
-    row=cur.fetchall()
+    rows=cur.fetchall()
     con.close()
-    return row
+    return rows
 
 
-def deleteRec():
+def deleteRec(id):
     con=sqlite3.connect("student.db")
     cur=con.cursor()
     cur.execute("DELETE FROM student WHERE id=?", (id,))
@@ -41,12 +42,18 @@ def searchData(StdID="", Firstname="", Lastname="", DoB="", Age="", Gender="", A
     cur=con.cursor()
     cur.execute("SELECT * FROM student WHERE StdID=? OR Firstname=? OR Lastname=? OR DoB=? OR Age=? OR Gender=? OR Address=? OR \
         Mobile=? ", (StdID, Firstname, Lastname, DoB, Age, Gender, Address, Mobile))
+    rows=cur.fetchall()
+    con.close
+    return rows
     
 
 def dataUpdate(id,StdID="", Firstname="", Lastname="", DoB="", Age="", Gender="", Address="", Mobile=""):
     con=sqlite3.connect("student.db")
     cur=con.cursor()
-    cur.execute("UPDATE student SET StdID=?, Firstname=?, OR Lastname=?, DoB=?, Age=?, Gender=? Address=?, Mobile=?, WHERE id=?", \
+    cur.execute("UPDATE student SET StdID=?, Firstname=?, Lastname=?, DoB=?, Age=?, Gender=? Address=?, Mobile=?, WHERE id=?", \
         (StdID, Firstname, Lastname, DoB, Age, Gender, Address, Mobile, id))
     con.commit()
     con.close
+
+
+studentData()

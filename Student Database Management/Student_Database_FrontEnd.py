@@ -1,6 +1,8 @@
 # Frontend
 
-# https://www.youtube.com/watch?v=dlRXp4YSuG4 - 55 min
+sd = ''
+
+# https://www.youtube.c om/watch?v=dlRXp4YSuG4 - 55 min
 
 from tkinter import *
 import tkinter.messagebox
@@ -26,6 +28,7 @@ class Student:
 
         # ============================================Functions==============================================
 
+
         def iExit():
             iExit = tkinter.messagebox.askyesno(
                 "Student Database Management", "Confirm if you want to exit")
@@ -33,7 +36,8 @@ class Student:
                 root.destroy()
                 return
 
-        def clearData():
+
+        def ClearData():
             self.txtStdID.delete(0, END)
             self.txtFirstname.delete(0, END)
             self.txtLastname.delete(0, END)
@@ -43,18 +47,21 @@ class Student:
             self.txtAddress.delete(0, END)
             self.txtMobile.delete(0, END)
 
+
         def addData():
             if(len(StdID.get()) != 0):
-                stdDatabase_BackEnd.addStdRec(StdID.get(), Firstname.get(), Lastname.get(), DoB.get(), Age.get(), Gender.get(),
-                                              Address.get(), Mobile.get())
+                stdDatabase_BackEnd.addStdRec(StdID.get(), Firstname.get(), Lastname.get(), DoB.get(), Age.get(), Gender.get(), \
+                                        Address.get(), Mobile.get())
                 studentlist.delete(0, END)
-                studentlist.insert(END, (StdID.get(), Firstname.get(), Lastname.get(), DoB.get(), Age.get(), Gender.get(),
-                                         Address.get(), Mobile.get()))
+                studentlist.insert(END, (StdID.get(), Firstname.get(), Lastname.get(), DoB.get(), Age.get(), Gender.get(), \
+                                        Address.get(), Mobile.get()))
+
 
         def DisplayData():
             studentlist.delete(0, END)
             for row in stdDatabase_BackEnd.viewData():
                 studentlist.insert(END, row, str(""))
+
 
         def StudentRec(event):
             global sd
@@ -63,10 +70,10 @@ class Student:
 
             self.txtStdID.delete(0, END)
             self.txtStdID.insert(END, sd[1])
-            self.txtFirstName.delete(0, END)
-            self.txtFirstName.insert(END, sd[2])
-            self.txtLastName.delete(0, END)
-            self.txtLastName.insert(END, sd[3])
+            self.txtFirstname.delete(0, END)
+            self.txtFirstname.insert(END, sd[2])
+            self.txtLastname.delete(0, END)
+            self.txtLastname.insert(END, sd[3])
             self.txtDoB.delete(0, END)
             self.txtDoB.insert(END, sd[4])
             self.txtAge.delete(0, END)
@@ -78,11 +85,13 @@ class Student:
             self.txtMobile.delete(0, END)
             self.txtMobile.insert(END, sd[8])
 
+
         def DeleteData():
             if(len(StdID.get()) != 0):
                 stdDatabase_BackEnd.deleteRec(sd[0])
-                clearData()
+                ClearData()
                 DisplayData()
+
 
         def searchDatabase():
             studentlist.delete(0, END)
@@ -90,16 +99,18 @@ class Student:
                     DoB.get(), Age.get(), Gender.get(), Address.get(), Mobile.get()):
                 studentlist.insert(END,row,str(""))
                 
+  
                 
         def update():
-            if len(StdID.get()) !=0:
-                stdDatabase_BackEnd.deleteStdRec(sd[0])
-            if len(StdID.get()) !=0:
+            if (len(StdID.get()) !=0):
+                stdDatabase_BackEnd.deleteRec(sd[0])
+            if (len(StdID.get()) !=0):
                 stdDatabase_BackEnd.addStdRec(StdID.get(), Firstname.get(), Lastname.get(), \
                     DoB.get(), Age.get(), Gender.get(), Address.get(), Mobile.get())
                 studentlist.delete(0, END)
                 studentlist.insert(END,(StdID.get(), Firstname.get(), Lastname.get(), \
-                DoB.get(), Age.get(), Gender.get(), Address.get(), Mobile.get()))
+                    DoB.get(), Age.get(), Gender.get(), Address.get(), Mobile.get()))
+
 
         # ============================================Frames=================================================
 
@@ -132,26 +143,26 @@ class Student:
 
         # ============================================Labels & Entry Widget=============================================
 
-        self.labelStudentID = Label(DataFrameLEFT, font=(
+        self.labelStdID = Label(DataFrameLEFT, font=(
             'arial', 20, 'bold'), text="Student ID:", padx=2, pady=2, bg="Ghost White")
-        self.labelStudentID.grid(row=0, column=0, sticky=W)
-        self.txtStudentID = Entry(DataFrameLEFT, font=(
+        self.labelStdID.grid(row=0, column=0, sticky=W)
+        self.txtStdID = Entry(DataFrameLEFT, font=(
             'arial', 20, 'bold'), textvariable=StdID, width=39)
-        self.txtStudentID.grid(row=0, column=1)
+        self.txtStdID.grid(row=0, column=1)
 
-        self.labelFirstName = Label(DataFrameLEFT, font=(
+        self.labelFirstname = Label(DataFrameLEFT, font=(
             'arial', 20, 'bold'), text="First Name:", padx=2, pady=2, bg="Ghost White")
-        self.labelFirstName.grid(row=1, column=0, sticky=W)
-        self.txtFirstName = Entry(DataFrameLEFT, font=(
+        self.labelFirstname.grid(row=1, column=0, sticky=W)
+        self.txtFirstname = Entry(DataFrameLEFT, font=(
             'arial', 20, 'bold'), textvariable=Firstname, width=39)
-        self.txtFirstName.grid(row=1, column=1)
+        self.txtFirstname.grid(row=1, column=1)
 
-        self.labelLastName = Label(DataFrameLEFT, font=(
+        self.labelLastname = Label(DataFrameLEFT, font=(
             'arial', 20, 'bold'), text="Last Name:", padx=2, pady=2, bg="Ghost White")
-        self.labelLastName.grid(row=2, column=0, sticky=W)
-        self.txtLastName = Entry(DataFrameLEFT, font=(
+        self.labelLastname.grid(row=2, column=0, sticky=W)
+        self.txtLastname = Entry(DataFrameLEFT, font=(
             'arial', 20, 'bold'), textvariable=Lastname, width=39)
-        self.txtLastName.grid(row=2, column=1)
+        self.txtLastname.grid(row=2, column=1)
 
         self.labelDoB = Label(DataFrameLEFT, font=(
             'arial', 20, 'bold'), text="Date of Birth:", padx=2, pady=2, bg="Ghost White")
@@ -209,7 +220,7 @@ class Student:
         self.btnDisplayData.grid(row=0, column=1)
 
         self.btnClearData = Button(ButtonFrame, text="Clear", font=(
-            'arial', 20, 'bold'), height=1, width=10, bd=4, command=clearData)
+            'arial', 20, 'bold'), height=1, width=10, bd=4, command=ClearData)
         self.btnClearData.grid(row=0, column=2)
 
         self.btnDeleteData = Button(ButtonFrame, text="Delete", font=(
