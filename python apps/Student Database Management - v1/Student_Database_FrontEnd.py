@@ -14,8 +14,8 @@ class Student:
     def __init__(self, root):
         self.root = root
         self.root.title("Student Database Management")
-        self.root.geometry("1350x7500+0+0")
-        self.root.config(bg="cadet blue")
+        self.root.geometry("1333x7500+0+0")
+        self.root.config(bg="grey1")
 
         StdID = StringVar()
         Firstname = StringVar()
@@ -114,23 +114,23 @@ class Student:
 
         # ============================================Frames=================================================
 
-        MainFrame = Frame(self.root, bg="cadet blue")
+        MainFrame = Frame(self.root, bg="gray1")
         MainFrame.grid()
 
-        TitleFrame = Frame(MainFrame, bd=2, padx=54, pady=8,
-                           bg="Ghost White", relief=RIDGE)
+        TitleFrame = Frame(MainFrame, bd=2, padx=5, pady=8,
+                           bg="gray1", relief=RIDGE)
         TitleFrame.pack(side=TOP)
 
         self.labelTitle = Label(TitleFrame, font=(
             'arial', 47, 'bold'), text="Student Database Management System", bg="Ghost White")
         self.labelTitle.grid()
 
-        ButtonFrame = Frame(MainFrame, bd=2, width=1350, height=70,
-                            padx=18, pady=10, bg="Ghost White", relief=RIDGE)
+        ButtonFrame = Frame(MainFrame, bd=2, width=1333, height=70,
+                            padx=18, pady=10, bg="gray1", relief=RIDGE)
         ButtonFrame.pack(side=BOTTOM)
 
         DataFrame = Frame(MainFrame, bd=2, width=1300, height=400,
-                          padx=20, pady=20, bg="Ghost White", relief=RIDGE)
+                          padx=20, pady=20, bg="gray15", relief=RIDGE)
         DataFrame.pack(side=BOTTOM)
 
         DataFrameLEFT = LabelFrame(DataFrame, bd=1, width=1000, height=600, padx=20, relief=RIDGE,
@@ -185,6 +185,13 @@ class Student:
             'arial', 20, 'bold'), textvariable=Gender, width=39)
         self.txtGender.grid(row=5, column=1)
 
+        self.labelAddress = Label(DataFrameLEFT, font=(
+            'arial', 20, 'bold'), text="Address:", padx=2, pady=2, bg="Ghost White")
+        self.labelAddress.grid(row=6, column=0, sticky=W)
+        self.txtAddress = Entry(DataFrameLEFT, font=(
+            'arial', 20, 'bold'), textvariable=Address, width=39)
+        self.txtAddress.grid(row=6, column=1)
+        
         self.labelAddress = Label(DataFrameLEFT, font=(
             'arial', 20, 'bold'), text="Address:", padx=2, pady=2, bg="Ghost White")
         self.labelAddress.grid(row=6, column=0, sticky=W)

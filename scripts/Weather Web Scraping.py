@@ -26,9 +26,9 @@ temperatures = [item.find(class_='temp').get_text() for item in items]
 
 weather_stuff = pd.DataFrame(
     {
-        'period': period_names,
-        'short_descriptions': short_descriptions,
-        'temperatures': temperatures,    
+        'Period': period_names,
+        'Description': short_descriptions,
+        'Temperatures': temperatures,    
     })
 
 print(weather_stuff)
