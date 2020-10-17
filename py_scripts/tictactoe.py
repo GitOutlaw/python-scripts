@@ -1,4 +1,4 @@
-# --------- Global Variables -----------
+2# --------- Global Variables -----------
 
 # Will hold our game board data
 board = ["-"] * 9
