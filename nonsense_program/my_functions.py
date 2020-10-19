@@ -7,7 +7,8 @@ def user_info():
     user_name = input('Enter your name: ')
     user_age = int(input('Enter your age: '))
     year = 2020 - user_age + 100
-    print(f'Welcome {user_name}, you are {user_age}. You will be 100 in the year {year}')
+    print(
+        f'Welcome {user_name}, you are {user_age}. You will be 100 in the year {year}')
 
 
 def calculation():
@@ -17,14 +18,14 @@ def calculation():
             num_2 = int(input("Enter another number to multiply: "))
             total = num_1 * num_2
         except ValueError:
-            print("Sorry, I didn't understand that, starting over")            
+            print("Sorry, I didn't understand that, starting over")
             continue
-        else:            
+        else:
             print("Multiply")
             print(f'{num_1} x {num_2} = {total}')
         if input('Do You Want To Multiply more numbers? y/n ') != 'y':
             break
-            
+
 
 def my_calender():
 
@@ -40,8 +41,8 @@ def password_generator():
     alphabet = string.ascii_letters + string.digits
     password = ''.join(secrets.choice(alphabet) for i in range(12))
     print(f'Random Password Generated: {password}')
-    
-    
+
+
 def payroll():
     hourly_rate = float(input('Enter your hourly pay: '))
     hours_worked = float(input('Enter your hours worked'))

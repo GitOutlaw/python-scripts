@@ -2,7 +2,7 @@
 
 sd = ''
 
-# https://www.youtube.c om/watch?v=dlRXp4YSuG4 - 55 min
+# https://www.youtube.com/watch?v=dlRXp4YSuG4 - 55 min
 
 from tkinter import *
 import tkinter.messagebox
