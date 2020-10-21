@@ -1,19 +1,19 @@
 from my_functions import *
 
-# user_info()
+user_info()
 
-# print()
+print()
 
-# calculation()
+calculation()
 
-# print()
+print()
 
-# my_calender()
+my_calender()
 
-# print()
+print()
 
 password_generator()
 
-# print()
+print()
 
-# payroll()
+payroll()
