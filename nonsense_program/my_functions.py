@@ -39,8 +39,9 @@ def my_calender():
 
 def password_generator():
     alphabet = string.ascii_letters + string.digits
-    password = ''.join(secrets.choice(alphabet) for i in range(12))
-    print(f'Random Password Generated: {password}')
+    characters = int(input('How many characters?: '))
+    password = ''.join(secrets.choice(alphabet) for i in range(characters))
+    print(f'Generated {characters} Random Characters: {password}')
 
 
 def payroll():
