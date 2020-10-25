@@ -37,12 +37,23 @@ class Ranger:
         print(
             f'{self.name} uses {self.power} for an attack of <{random.randint(min_value, max_value)}>.')
 
+    
+    def attack_long_shot(self):
+        min_value = 45
+        max_value = 100
+        # print(random.randint(min_value, max_value))
+        print(
+            f'{self.name} uses {self.power} for an attack of <{random.randint(min_value, max_value)}>.')
+
+    
+
+
     def heal(self):
         pass
 
 
 ranger1 = Ranger('Max', 'Pierce')
-wizard1 = Wizard() 
+wizard1 = Wizard('Merlin', 'L')
 
 ranger1.attack_pierce()
 
