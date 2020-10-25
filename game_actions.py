@@ -3,13 +3,16 @@ import random
 
 class Wizard:
 
-    def __init__(self, name, power, damage):
+    def __init__(self, name, power):
         self.name = name
         self.power = power
         self.damage = damage
 
-    def attack(self):
-        print(f'{self.name} uses {self.power} for an attack of {self.damage}')
+    def attack_lighting(self):
+        min_value = 38
+        max_value = 100
+        print(
+            f'{self.name} uses {self.power} for an attack of {random.randint(min_value, max_value)}.')
 
     def heal(self):
         pass
@@ -17,7 +20,7 @@ class Wizard:
 
 class Ranger:
 
-    def __init__(self, name, power,):
+    def __init__(self, name, power):
         self.name = name
         self.power = power
         # self.damage = damage
