@@ -15,7 +15,6 @@ with open('D:/dev/gits/Python-Scripts/internet_speed_test/data/internet_test.csv
         speedcsv, fieldnames=['time', 'download', 'upload'])
     csv_writer.writeheader()
 
-
     while True:
 
         time_now = datetime.datetime.now().strftime('%m-%d-%Y %I:%M:%S %p')
@@ -29,7 +28,7 @@ with open('D:/dev/gits/Python-Scripts/internet_speed_test/data/internet_test.csv
 
         print(
             f"Date and Time: {time_now} | Download: {downspeed} Mb/s | Upload: {upspeed} Mb/s")
-        print('Processing every 30 seconds...')
+        print('Processing...')
         print('<--- Press ctrl + c to exit -->')
         # 60 seconds sleep
         time.sleep(30)
