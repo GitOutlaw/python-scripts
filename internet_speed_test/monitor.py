@@ -7,7 +7,7 @@ import os
 s = speedtest.Speedtest()
 
 print('<--- Internet Speed Test --->')
-print('Processing every 30 seconds...')
+print('Processing...')
 print('<--- Press ctrl + c to exit -->')
 
 with open('D:/dev/gits/Python-Scripts/internet_speed_test/data/internet_test.csv', mode='w') as speedcsv:
