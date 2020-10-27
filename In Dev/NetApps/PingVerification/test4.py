@@ -1,3 +1,3 @@
-import my_func*
+from my_func import ping_test
 
-my_func()
+ping_test()
