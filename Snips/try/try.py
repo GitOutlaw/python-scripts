@@ -1,6 +1,6 @@
 
 try:
-    f = open('test_file.txt')
+    f = open('Snips/try/data/test_file.txt')
 except FileNotFoundError as e:
     print(e)
 except Exception as e:
@@ -11,5 +11,3 @@ else:
     f.close()
 finally:
     print("Exiting...")
-
-
