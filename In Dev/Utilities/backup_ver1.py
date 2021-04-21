@@ -3,7 +3,7 @@ import os
 import time
 
 
-source = ['D:\\dev']
+source = [' "D:\\dev\\Gits\\Python-Scripts" ']
 
 target_dir = 'F:\\Backup'
 
