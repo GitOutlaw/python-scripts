@@ -3,11 +3,11 @@ import os
 import time
 
 
-source = ['"D:\\dev"']
+source = ['D:\\dev']
 
-target_dir = "F:\\Backup"
+target_dir = 'F:\\Backup'
 
-target = target_dir + os.sep + time.strftime("%Y%m%d%H%M%S") + ".zip"
+target = target_dir + os.sep + time.strftime('%Y%m%d%H%M%S') + '.zip'
 
 if not os.path.exists(target_dir):
     os.mkdir(target_dir)
