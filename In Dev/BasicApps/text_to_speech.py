@@ -8,10 +8,10 @@ pyobj = pyttsx3.init()
 voices = pyobj.getProperty('voices') 
 pyobj.setProperty('voice', voices[1].id) 
 
-# Open, read and close file - \\ for linux / for windows path
-fo = open ('C:/Users/Hal/Desktop/speech.txt','r')
-ip = fo.read()
-fo.close()
+# # Open, read and close file - \\ for linux / for windows path
+# fo = open ('C:/Users/Hal/Desktop/speech.txt','r')
+# ip = fo.read()
+# fo.close()
 
 # Set speed playback
 pyobj.setProperty('rate', 150)
@@ -20,7 +20,7 @@ pyobj.setProperty('rate', 150)
 pyobj.setProperty('volume', 1.0)
 
 # Text to voice - edit text to change output
-# pyobj.say('Welcome to Python Programming')
+pyobj.say('Welcome to Python Programming')
 
 # Save text to mp3 - edit file name and or location
 # pyobj.save_to_file(ip, 'C:/Users/Hal/Desktop/sample.mp3')
