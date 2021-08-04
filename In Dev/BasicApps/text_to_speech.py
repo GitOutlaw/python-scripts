@@ -9,7 +9,7 @@ voices = pyobj.getProperty('voices')
 pyobj.setProperty('voice', voices[0].id) 
 
 # # Open, read and close file - \\ for linux / for windows path
-# fo = open ('C:/Users/Hal/Desktop/speech.txt','r')
+# fo = open ('C:/Users/Hal/Desktop/speech.txt','r') 
 # ip = fo.read()
 # fo.close()
 
@@ -28,10 +28,6 @@ pyobj.setProperty('volume', 1.0)
 # Python's design philosophy emphasizes code readability with its notable use of significant indentation. 
 # Its language constructs as well as its object-oriented approach aim to help programmers write clear 
 # logical code for small and large-scale projects.
-
-# Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms,
-# including structured (particularly, procedural), object-oriented and functional programming. 
-# Python is often described as a "batteries included" language due to its comprehensive standard library.
 
 # Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language,
 # and first released it in 1991 as Python 0.9.0.
