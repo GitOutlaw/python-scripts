@@ -10,7 +10,7 @@ print('<--- Internet Speed Test --->')
 print('<-- Processing -->')
 print('<--- Press ctrl + c to exit -->')
 
-with open('In Dev/NetApps/Internet Speed/data/internet_test.csv', mode='w') as speedcsv:
+with open('E:/dev/Gits/Python-Scripts/Python-Scripts/In Dev/NetApps/Internet Speed/data/internet_test.csv', mode='w') as speedcsv:
     csv_writer = csv.DictWriter(
         speedcsv, fieldnames=['time', 'download', 'upload'])
     csv_writer.writeheader()
