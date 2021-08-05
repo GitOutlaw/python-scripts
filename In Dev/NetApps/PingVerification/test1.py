@@ -10,4 +10,5 @@ for ip in ip_list:
         print(f'UP {ip} Ping Successful' + '\n')
     else:
         print(f'DOWN {ip} Ping Unsuccessful' + '\n')
+    
      

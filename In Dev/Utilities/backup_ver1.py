@@ -3,9 +3,9 @@ import os
 import time
 
 
-source = ["D:\\dev\\Gits\\Python-Scripts"]
+source = ["E:\\dev\\Gits\\Python-Scripts"]
 
-target_dir = 'F:\\Backup'
+target_dir = 'D:\Backup'
 
 target = target_dir + os.sep + time.strftime("%Y%m%d%H%M%S") + ".zip"
 
