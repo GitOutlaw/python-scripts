@@ -8,11 +8,11 @@ def password_generator():
             characters = int(input('How many characters: '))
         except ValueError:
             print("Please enter a number and try again")
-            continue   
+            continue           
         else:
-            alphabet = string.ascii_letters + string.digits
+            alphabet = string.ascii_letters + string.digits + string.punctuation
             password = ''.join(secrets.choice(alphabet) for i in range(characters))
             print(password)
-            break           
+            break         
                        
 password_generator()  
