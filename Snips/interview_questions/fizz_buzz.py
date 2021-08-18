@@ -18,7 +18,7 @@ for num in range(1,20):
 
 # lambda solution
 
-print(*map(lambda i: 'Fizz'*(not i%3)+'Buzz'*(not i%5) or i, range(1,20)),sep='\n')
+# print(*map(lambda i: 'Fizz'*(not i%3)+'Buzz'*(not i%5) or i, range(1,20)),sep='\n')
     
   
 
