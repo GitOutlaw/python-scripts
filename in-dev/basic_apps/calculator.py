@@ -19,7 +19,7 @@ def divide(n1, n2):  # Divide
     return n1 / n2
 
 
-def exponent(n1, n2):  # Divide
+def exponent(n1, n2):  # Exponent
     return n1 ** n2
 
 
@@ -40,6 +40,7 @@ def calculator():
     numbers and operations.
     """
     print(logo)
+
     while True:
         try:
             num1 = float(input("What's the first number?: "))
@@ -55,7 +56,7 @@ def calculator():
 
     should_continue = True
 
-    while should_continue:       
+    while should_continue:
 
         operation_symbol = input("Pick an operation: ")
         num2 = float(input("What's the next number?: "))
