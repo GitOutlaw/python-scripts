@@ -1,5 +1,6 @@
 # Calculator
-from calculator_art import logo
+from replit import clear  # Import clear function
+from calculator_art import logo  # Import logo from calculator_art.py
 
 
 def add(n1, n2):  # Add
@@ -22,13 +23,14 @@ def exponent(n1, n2):  # Divide
     return n1 ** n2
 
 
-# Operation symbols dictionary keys are symbols and values are functions
+# Operation symbols dictionary Keys are symbols and Values are function names.=
 operations = {
     "+": add,
     "-": subtract,
     "*": multiply,
     "/": divide,
     "**": exponent,
+
 }
 
 
@@ -56,11 +58,12 @@ def calculator():
 
         print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-        # Continue or reset calculator
+        # Continue or restart calculator
         if input(f"Type 'y' to continue calculating with {answer} or 'n' to start a new calcultation: ") == "y":
             num1 = answer
         else:
             should_continue = False
+            clear()
             calculator()
 
 
