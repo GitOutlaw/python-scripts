@@ -40,8 +40,14 @@ def calculator():
     numbers and operations.
     """
     print(logo)
+    while True:
+        try:
+            num1 = float(input("What's the first number?: "))
+            break
 
-    num1 = float(input("What's the first number?: "))
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
+            pass
 
     # Display operation symbols
     for symbol in operations:
@@ -49,7 +55,7 @@ def calculator():
 
     should_continue = True
 
-    while should_continue:
+    while should_continue:       
 
         operation_symbol = input("Pick an operation: ")
         num2 = float(input("What's the next number?: "))
