@@ -27,7 +27,6 @@ def check_answer(guess, a_followers, b_followers):
 
 
 def game():
-
     # Set intial score to 0
     score = 0
     # Used for while loop
