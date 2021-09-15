@@ -9,11 +9,11 @@ def format_data(account):
     account_name = account["name"]
     account_description = account["description"]
     account_country = account["country"]
-    
+
     # Used to debug the game.
     account_answer = account["follower_count"]
     print(f"Pssst the answer is: {account_answer}")
-    
+
     # Used to return fstring with formatted data.
     return f"{account_name}, a {account_description}, from {account_country}."
 
@@ -27,13 +27,15 @@ def check_answer(guess, a_followers, b_followers):
 
 
 def game():
+    # Display art.
+    print(logo)
     # Set intial score to 0
     score = 0
     # Used for while loop
     game_should_continue = True
     account_b = random.choice(data)
 
-    # Makes the game repeatable.
+    # Sets the game to be repeatable.
     while game_should_continue:
         # Generate a random account from the game data.
         account_a = account_b
@@ -51,26 +53,22 @@ def game():
         # Ask user for a guess.
         guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
-        # Gets follower count of each account. Checks if user is correct. 
+        # Gets follower count of each account. Checks if user is correct.
         a_follower_count = account_a["follower_count"]
         b_follower_count = account_b["follower_count"]
         is_correct = check_answer(guess, a_follower_count, b_follower_count)
 
-        # Clear the screen between rounds
+        # Clear the screen between rounds.
         clear()
-        # Display art.
-        print(logo)
 
         # Give user feedback on their guess, and keep score.
         if is_correct:
             score += 1
             print(f"You're right! Current score: {score}")
-            
 
         else:
             game_should_continue = False
             print(f"Sorry that's wrong. Final score: {score}")
 
+
 game()
-
-
