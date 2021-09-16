@@ -26,6 +26,8 @@ print("Your quest is to find the treasure.")
 
 direction = input('left" or "right": ')
 
+play_again = True
+
 if direction == "left":
     choice1 = input('''You've come to a lake. There is an island in the middle of the lake.
 Type "wait" to wait for a boat. Type "swim" to swim across. ''')

@@ -29,13 +29,18 @@ Scissors
       (____)
 ---.__(___)
 '''
+
+# Creates list to represent art work as variables
 game_images = [rock, paper, scissors]
 
+# Asks user to choose option, rock, paper, scissors
 user_choice = int(
     input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 
 print("You Chose:")
 
+
+# Runs logic of game. Uses if statement with a nested if elif statements.
 if user_choice >= 3 or user_choice < 0:
     print("You typed an invalid number, you lose!")
 else:
