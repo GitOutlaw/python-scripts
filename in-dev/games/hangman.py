@@ -15,16 +15,13 @@ lives = len(stages) - 1
 # print(f'Pssst, the solution is {chosen_word}.')
 
 # Create blanks
-
 display = []
 for _ in range(word_length):
     display += "_"
 
 while not game_is_finished:
     guess = input("Guess a letter: ").lower()
-
     clear()
-
     # Check guessed letter
     for position in range(word_length):
         letter = chosen_word[position]

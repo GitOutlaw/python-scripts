@@ -40,11 +40,9 @@ def game():
         # Generate a random account from the game data.
         account_a = account_b
         account_b = random.choice(data)
-
         # Makes account at postition B become the next account at position A.
         while account_a == account_b:
             account_b = random.choice(data)
-
         # Print formatted accounts from data.
         print(f"Compare A: {format_data(account_a)}.")
         print(vs)
@@ -65,7 +63,6 @@ def game():
         if is_correct:
             score += 1
             print(f"You're right! Current score: {score}")
-
         else:
             game_should_continue = False
             print(f"Sorry that's wrong. Final score: {score}")

@@ -1,6 +1,6 @@
 2# --------- Global Variables -----------
 
-# Will hold our game board data
+# Will hold game board data
 board = ["-"] * 9
 
 # Lets us know if the game is over yet
