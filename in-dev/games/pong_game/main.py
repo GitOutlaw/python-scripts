@@ -12,12 +12,13 @@ screen.setup(width=800, height=600)
 screen.title("Pong")
 screen.tracer(0)
 
-# Setup paddles ball and scoreboard.
+# Instantiate paddles ball and scoreboard.
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 ball = Ball()
 scoreboard = ScoreBoard()
 
+# Setup the controls for the paddles.
 screen.listen()
 screen.onkeypress(r_paddle.go_up, "Up")
 screen.onkeypress(r_paddle.go_down, "Down")
@@ -35,7 +36,10 @@ while game_is_on:
         ball.bounce_y()
 
     # Detect collision with paddle.
-    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+    if (
+        ball.distance(r_paddle) < 50 and ball.xcor() > 320 or
+            ball.distance(l_paddle) < 50 and ball.xcor() < -320
+    ):
         ball.bounce_x()
 
     # Detect right paddle misses.
@@ -49,7 +53,7 @@ while game_is_on:
         scoreboard.r_point()
 
     # Endgame when a player reaches 10
-    if scoreboard.l_score == 3 or scoreboard.r_score == 3:
+    if scoreboard.l_score == 10 or scoreboard.r_score == 10:
         scoreboard.game_over()
         game_is_on = False
 

@@ -1,3 +1,4 @@
+# List with dictionary that holds questions.
 question_data = [
     {
         "category": "Science: Computers",
@@ -51,7 +52,7 @@ question_data = [
         "type": "boolean",
         "difficulty": "easy",
         "question": "The Windows ME operating system was released in the year 2000.",
-        "correct_answer": "True", 
+        "correct_answer": "True",
         "incorrect_answers": ["False"]},
     {
         "category": "Science: Computers",

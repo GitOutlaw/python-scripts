@@ -6,9 +6,11 @@ class QuizBrain:
         self.question_list = q_list
 
     def still_has_questions(self):
+        '''Checks if there are any questions left.'''
         return self.question_number < len(self.question_list)
 
     def next_question(self):
+        '''Creates the next question.'''
         current_question = self.question_list[self.question_number]
         self.question_number += 1
         user_answer = input(
@@ -16,6 +18,7 @@ class QuizBrain:
         self.check_answer(user_answer, current_question.answer)
 
     def check_answer(self, user_answer, correct_answer):
+        '''Checks answers and display if right or wrong.'''
         if user_answer.lower() == correct_answer.lower():
             self.score += 1
             print("You got it right!")

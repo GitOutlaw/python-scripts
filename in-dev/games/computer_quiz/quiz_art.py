@@ -1,3 +1,4 @@
+# Docstring with logo art.
 logo = '''
 
    ______                            __               ____        _    
