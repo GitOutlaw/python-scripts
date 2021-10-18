@@ -6,7 +6,7 @@ pyobj = pyttsx3.init()
 
 # Set voice used male = 0 - female = 1
 voices = pyobj.getProperty('voices')
-pyobj.setProperty('voice', voices[0].id)
+pyobj.setProperty('voice', voices[1].id)
 
 # # Open, read and close file - \\ for linux / for windows path
 # fo = open ('C:/Users/Hal/Desktop/speech.txt','r')
