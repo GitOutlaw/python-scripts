@@ -1,6 +1,6 @@
 from tkinter import *
 
-
+# Convert distance function.
 def convert_distance():
     '''Convers miles to kilometers. Conversion factor 1.60934'''
     # Use to test button.

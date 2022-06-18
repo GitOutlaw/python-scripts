@@ -3,4 +3,4 @@ print(problems)
 
 list = problems.split(", ")
 
-print(list)
+print(type(list))
