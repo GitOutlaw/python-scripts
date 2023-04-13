@@ -1,8 +1,0 @@
-1. ask user for state
-
-2. if state is correct
-	then do stuff
-
-3. else state incorrect
-	then rest prompt
-
