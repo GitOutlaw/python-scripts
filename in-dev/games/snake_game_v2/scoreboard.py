@@ -8,7 +8,7 @@ class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        with open("day24/snake_game_v2/data.txt", encoding='utf8') as data:
+        with open("/media/sf_dev_share/gits/python-scripts/in-dev/games/snake_game_v2/data.txt", encoding='utf8') as data:
             self.high_score = int(data.read())
         self.color("white")
         self.penup()
